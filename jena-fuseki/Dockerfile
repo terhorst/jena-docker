@@ -63,7 +63,8 @@ RUN chmod 755 /docker-entrypoint.sh
 
 COPY load.sh /jena-fuseki/
 COPY tdbloader /jena-fuseki/
-RUN chmod 755 /jena-fuseki/load.sh /jena-fuseki/tdbloader
+COPY tdbloader2 /jena-fuseki/
+RUN chmod 755 /jena-fuseki/load.sh /jena-fuseki/tdbloader /jena-fuseki/tdbloader2
 #VOLUME /staging
 
 
